@@ -1,0 +1,28 @@
+---------------------------Kafka CLI Commands to list/delete created topics-----------------------------------
+
+kafka-topics --zookeeper localhost:2181 --list
+
+kafka-topics --zookeeper localhost:2181 --delete --topic _confluent-ksql-default__command_topic
+kafka-topics --zookeeper localhost:2181 --delete --topic _confluent-ksql-default_query_CTAS_TURNSTILE_SUMMARY_0-KSTREAM-AGGREGATE-STATE-STORE-0000000004-changelog
+kafka-topics --zookeeper localhost:2181 --delete --topic _confluent-ksql-default_query_CTAS_TURNSTILE_SUMMARY_0-KTABLE-AGGREGATE-STATE-STORE-0000000009-changelog
+kafka-topics --zookeeper localhost:2181 --delete --topic _confluent-ksql-default_query_CTAS_TURNSTILE_SUMMARY_0-KTABLE-AGGREGATE-STATE-STORE-0000000009-repartition
+kafka-topics --zookeeper localhost:2181 --delete --topic com.udacity.cta.stations
+kafka-topics --zookeeper localhost:2181 --delete --topic com.udacity.cta.station.arrivals.v1
+kafka-topics --zookeeper localhost:2181 --delete --topic com.udacity.cta.stations.table.v1
+kafka-topics --zookeeper localhost:2181 --delete --topic com.udacity.cta.turnstile.v1
+kafka-topics --zookeeper localhost:2181 --delete --topic com.udacity.cta.weather.v1
+kafka-topics --zookeeper localhost:2181 --delete --topic stations-stream-__assignor-__leader
+kafka-topics --zookeeper localhost:2181 --delete --topic stations.stations
+kafka-topics --zookeeper localhost:2181 --delete --topic TURNSTILE_SUMMARY
+
+kafka-topics --zookeeper localhost:2181 --delete --topic com.udacity.streams.clickevents
+kafka-topics --zookeeper localhost:2181 --delete --topic com.udacity.streams.pages
+kafka-topics --zookeeper localhost:2181 --delete --topic com.udacity.streams.purchases
+kafka-topics --zookeeper localhost:2181 --delete --topic com.udacity.streams.users
+
+sudo install w3m
+w3m <http://localhost:8889>
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic "TURNSTILE_SUMMARY" --from-beginning"
+
+faust -A faust_stream worker -l info
